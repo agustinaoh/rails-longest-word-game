@@ -5,6 +5,7 @@
 body {
   background-color: #f5cac3;
   font-family: 'Space Mono', monospace;
+  font-size: 18px;
 }
 
 h1 {
@@ -15,7 +16,7 @@ h1 {
 }
 
 .container {
-  width: 800px;
+  width: 900px;
 }
 
 .sorted-letters {
@@ -25,10 +26,45 @@ h1 {
 .letter-boxx {
   background-color: #b7094c;
   color: white;
-  box-shadow: 4px 4px 6px rgba($color: #000, $alpha: 0.2);
   width: 60px;
   height: 60px;
   text-align: center;
   border-radius: 4px;
   font-size: 38px;
+}
+
+a {
+  text-decoration: none;
+  color: #b7094c;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  &:hover {
+    color: white;
+  }
+}
+
+#play-btn {
+  background-color: #b7094c;
+  color: white;
+  border: 1px solid #b7094c;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: white;
+    color: #b7094c;
+    border: 1px solid white;
+  }
+}
+
+#again {
+  margin-top: 40px;
+}
+
+#input_word:focus {
+  outline: none;
 }

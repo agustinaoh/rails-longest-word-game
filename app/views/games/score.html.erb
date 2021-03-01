@@ -1,1 +1,10 @@
-<h1>score</h1>
+<h1>SCORE</h1>
+<div class="results text-center">
+  <% if @english %>
+        <p>CONGRATULATIONS!</p>  
+        <p><strong><%= @word.upcase %></strong> is an english word.</p>
+  <% else %>
+        <p>Sorry, <strong><%= @word.upcase %></strong> does not seem to be an English word. </p>
+  <% end %>
+  <p id="again"><%= link_to 'Play again!', new_path %></p>
+</div>

@@ -1,6 +1,18 @@
 <h1>NEW GAME</h1>
 <div class="sorted-letters d-flex justify-content-between">
-  <% 10.times do %>
-    <p class="letter-boxx"><%= @letters.sample.upcase %></p>
+  <% @sorted.each do |letter| %>
+    <p class="letter-boxx"><%= letter %></p>
   <% end %>
+</div>
+
+<div class="word text-center">
+  <p>What's the longest word you can find?</p>
+  <form action="score" method="POST" class="d-flex justify-content-center">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :sorted, @sorted %>
+    <div class="word-form">
+      <input type="text" name="word" id="input_word" autocomplete="off" placeholder="Type a word...">
+      <input id="play-btn" type="submit" value="play">
+    </div>
+  </form>
 </div>
